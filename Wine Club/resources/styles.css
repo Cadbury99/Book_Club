@@ -1,0 +1,397 @@
+html {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* -----Universal Styling----- */
+
+body {
+    background-color: #C8B1AF;
+    color: #C9ECE1;
+}
+
+h1 {
+    font-family: 'PT Sans', sans-serif;
+    font-style: italic;
+}
+
+h2 {
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    border: .5px solid #C9ECE1;
+    border-radius: 10px;
+    padding: 3%;
+}
+
+h3 {
+    font-family: 'PT Sans', sans-serif;
+    font-style: italic;
+}
+
+h4 {
+    font-family: 'PT Sans', sans-serif;
+}
+
+h5 {
+    font-family: 'Bitter', serif;
+}
+
+p {
+    font-family: 'Bitter', serif;
+}
+
+a {
+    cursor: pointer;
+    color: #C9ECE1;
+}
+
+a:visited {
+    color: #C8B1AF;
+}
+
+a:hover {
+    color: #948E83;
+}
+
+a:active {
+    color: #FBFBFB;
+}
+
+nav img,
+.title img {
+    border: 1px solid #948E83;
+    border-radius: 8px;
+}
+
+/* ----- Navigation ----- */
+
+nav {
+    background-color: #5D5770;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 5;
+    border-bottom: 2px solid #FBFBFB;
+}
+
+@media screen and (max-width: 680px) {
+    nav {
+        font-size: .75rem;
+        height: 45px;
+    }
+
+    nav .next,
+    nav .previous {
+        display:none;
+    }
+    
+    ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        text-align: center;
+        padding: 0;
+    }
+}
+
+nav img {
+    height: 2.5em;
+    width: auto;
+}
+
+@media screen and (min-width: 680px) {
+    nav {
+        height: 65px;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        align-content:space-around;
+        text-align: center;
+        padding: 0;
+    }
+
+}
+
+
+li {
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+    color: #C9ECE1;
+}
+
+li a:visited {
+    color: #C9ECE1;
+}
+
+/* ----- Headline ----- */
+
+.headline {
+    position: relative;
+    top: 45px;
+    background-image: url(../resources/images/books.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 8% 15%;
+}
+
+.title {
+    background-color: #5D5770;
+    text-align: center;
+    padding: 3% 2% 2% 2%;
+    border: 2px solid #FBFBFB;
+    border-radius: 10px;
+}
+
+.title img {
+    max-height: 175px;
+    width: auto;
+}
+
+@media screen and (max-width: 680px) {
+    .headline {
+        padding: 4% 7%;
+    }
+
+    .title img {
+        width: 85%;
+    }
+}
+
+/* ----- Blockquote ----- */
+
+blockquote {
+    background-color: #C9ECE1;
+    color: #5D5770;
+    border: 2px solid #FBFBFB;
+    border-radius: 10px;
+    margin: 10% 8%;
+    padding: 5%;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 500px) {
+    blockquote {
+        margin: 15% 8% 10% 8%;
+    }
+}
+
+/* ----- General Books ----- */
+
+#this-month,
+#next-month,
+#location,
+#upcoming,
+#previous {
+    background-color: #5D5770;
+    border: 1px solid #FBFBFB;
+    border-radius: 10px;
+    margin: 7%;
+    padding: 2% 7% 2% 7%;
+}
+
+.book1 img {
+    max-height: 400px;
+    width: auto;
+}
+
+.book2 img {
+    height: 200px;
+    width: auto;
+}
+
+.book3 img {
+    max-height: 300px;
+    width: auto;
+}
+
+.book1,
+.book2,
+.book3 {
+    text-align: center;
+}
+
+/* ----- This Month and Next Month ----- */
+
+.block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: .5rem;
+}
+
+.synopsis {
+    margin: 0 0 0 10%;
+}
+
+@media screen and (max-width: 680px) {
+    .synopsis {
+        display: none;
+    }
+
+    .book1 img {
+        max-width: 75%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .block {
+        display: grid;
+        grid-template: 1fr / 1fr;
+        justify-content: center;
+    }
+
+}
+
+
+/* ----- Location -----*/
+
+#location .block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#location img {
+    max-width: 300px;
+    height: auto;
+}
+
+@media screen and (max-width: 680px) {
+    #location .block {
+        display: grid;
+        grid-template: 1fr 2fr 1fr / 1fr;
+        justify-content: center;
+    }
+
+    .where {
+        margin-bottom: 2%;
+    }
+
+    #location img {
+        height: 33%;
+    }
+}
+
+/* ----- Ballot ----- */
+
+#upcoming h3 {
+    text-align: center;
+}
+
+.ballot {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+    grid-gap: 3%;
+}
+
+.book2 {
+    text-align: center;
+}
+
+.thief,
+.gatsby,
+.hotel {
+    min-width: 33%;
+}
+
+@media screen and (max-width: 680px) {
+    .ballot {
+        display: grid;
+        grid-template: repeat(3, 1fr) / 1fr;
+        justify-content: center;
+        padding-bottom: 30%;
+    }
+
+    .thief img,
+    .gatsby img,
+    .hotel img {
+        width: 68%;
+        height: auto;
+    }
+}
+
+/* ----- Previously Read ----- */
+
+.past {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.book3 {
+    padding:3% 5%;
+    text-align: center;
+}
+
+.past h3 {
+    text-align: center;
+}
+
+.frankenstein,
+.outlawed {
+    min-width: 45%;
+}
+
+@media screen and (max-width: 680px) {
+    .past {
+        display: grid;
+        grid-template: repeat(2, 1fr) / 1fr;
+        justify-content: center;
+    }
+}
+
+.credits {
+    color:#5D5770;
+    font-size: .75em;
+    margin-bottom: 75px;
+}
+
+.credits a {
+    color: #948E83;
+}
+
+.credits a:visited {
+    color: black;
+}
+
+.credits a:hover {
+    color: #FBFBFB;
+}
+
+.credits a:active {
+    color:#C9ECE1;
+}
+
+/* ----- Footer -----*/
+
+footer {
+    background-color: #5D5770;
+    color:#C9ECE1;
+    border-top: 2px solid #FBFBFB;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 4;
+    width: 100%;
+    text-align: center;
+    height: 65px;
+    line-height: .5rem;
+}
+
+@media screen and (max-width: 680px) {
+    footer {
+        height: 45px;
+        font-size: .75rem;
+    }
+}
