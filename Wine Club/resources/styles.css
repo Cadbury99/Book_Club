@@ -78,6 +78,10 @@ nav {
     border-bottom: 2px solid #FBFBFB;
 }
 
+nav li {
+    align-self: center;
+}
+
 @media screen and (max-width: 680px) {
     nav {
         font-size: .75rem;
@@ -110,7 +114,6 @@ nav img {
     ul {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        align-content:space-around;
         text-align: center;
         padding: 0;
     }
@@ -173,15 +176,21 @@ blockquote {
     color: #5D5770;
     border: 2px solid #FBFBFB;
     border-radius: 10px;
-    margin: 10% 8%;
-    padding: 5%;
+    margin: 5% 5%;
+    padding: 3%;
     text-align: center;
     font-size: 1.25rem;
 }
 
+@media screen and (max-width: 1000px) {
+    blockquote {
+        margin: 10% 5% 5% 5%;
+    }
+}
+
 @media screen and (max-width: 500px) {
     blockquote {
-        margin: 15% 8% 10% 8%;
+        margin: 15% 5% 5% 5%;
     }
 }
 
@@ -195,7 +204,7 @@ blockquote {
     background-color: #5D5770;
     border: 1px solid #FBFBFB;
     border-radius: 10px;
-    margin: 7%;
+    margin: 5%;
     padding: 2% 7% 2% 7%;
 }
 
